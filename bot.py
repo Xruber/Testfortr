@@ -29,7 +29,7 @@ import enginep30
 # ============================================================
 # Configuration
 # ============================================================
-TELEGRAM_TOKEN = os.getenv("8287229498:AAFWqPd3kB6nMqATo3zf8nN48GiWkCER36E")
+TELEGRAM_TOKEN = "8287229498:AAFWqPd3kB6nMqATo3zf8nN48GiWkCER36E"
 if not TELEGRAM_TOKEN:
     raise ValueError("TELEGRAM_TOKEN environment variable not set.")
 
