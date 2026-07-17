@@ -113,7 +113,7 @@ class EngineRunner:
         interval: int,
         bot_app: Application,
         chat_id: int,
-        update_interval: int = 100,
+        update_interval: int = 1000,
     ):
         self.config = config
         self.service = service
