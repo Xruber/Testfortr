@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 ================================================================================
- TELEGRAM REPORTER FOR THE CONSCIOUS MINDS ENGINE
+ TELEGRAM REPORTER FOoR THE CONSCIOUS MINDS ENGINE
 ================================================================================
  Runs the prediction engine for N rounds and reports live stats to Telegram.
 
@@ -181,22 +181,22 @@ def build_full_report(engine, final=False, round_num=0):
 # 
 def main():
     print("=" * 70)
-    print("  TELEGRAM REPORTER  —  Starting up")
+    print("  TELEGRAM REPORTER  â€”  Starting up")
     print("=" * 70)
 
     tg = Telegram(TELEGRAM_TOKEN, TELEGRAM_CHAT_ID)
     fetcher = Fetcher()
     engine = Engine()
 
-    tg.send(f" Bot starting — running {TOTAL_ROUNDS} rounds")
+    tg.send(f" Bot starting â€” running {TOTAL_ROUNDS} rounds")
 
     # Fetch initial history
-    print("\nFetching initial history …")
+    print("\nFetching initial history â€¦")
     nums = None
     while nums is None or len(nums) == 0:
         nums = fetcher.fetch_history_oldest_first()
         if nums is None:
-            print("  Fetch failed — retry in 10 s.")
+            print("  Fetch failed â€” retry in 10 s.")
             time.sleep(10)
     engine.history = nums[-CONFIG.MAX_HISTORY:]
     print(f"Loaded: {engine.history}")
